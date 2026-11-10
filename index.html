@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#030713">
+    <title>Mission Nova | Your Journey Begins</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div id="space-background" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <a class="brand" href="#" aria-label="Mission Nova home">
+            <span class="brand-symbol">N</span>
+            <span class="brand-text">
+                MISSION <strong>NOVA</strong>
+                <small>JUNIOR SPACE EXPLORATION</small>
+            </span>
+        </a>
+        <div class="mission-status"><span class="status-dot"></span>MISSION CONTROL ONLINE</div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <div class="eyebrow"><span class="eyebrow-line"></span>YOUR UNIVERSE IS WAITING</div>
+            <h1>Beyond Earth.<br><span>Beyond Imagination.</span></h1>
+            <p class="hero-description">
+                Become an astronaut. Discover the wonders of space.
+                Experience your first mission to the Moon or Mars.
+            </p>
+            <button id="begin-button" class="begin-button" type="button">
+                <span>BEGIN YOUR JOURNEY</span><span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+            <div class="hero-note"><span class="note-icon" aria-hidden="true">✦</span>YOUR FIRST MISSION AWAITS</div>
+        </div>
+        <div class="earth-label" aria-hidden="true">
+            <span class="earth-label-line"></span>
+            <span>PLANET EARTH<small>YOUR JOURNEY STARTS HERE</small></span>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true"><span></span>THE UNIVERSE AWAITS</div>
+    </main>
+
+    <div id="entry-modal" class="modal-overlay" hidden>
+        <section class="entry-card" role="dialog" aria-modal="true" aria-labelledby="entry-title">
+            <button id="close-modal" class="close-modal" type="button" aria-label="Close">×</button>
+            <div class="modal-kicker">MISSION CONTROL</div>
+            <h2 id="entry-title">Welcome, future astronaut!</h2>
+            <p class="modal-description">Before we launch, what should Commander Mira call you?</p>
+            <form id="astronaut-form">
+                <label for="astronaut-name">YOUR ASTRONAUT CALLSIGN</label>
+                <input id="astronaut-name" name="astronautName" type="text"
+                    placeholder="e.g. Nova Explorer" maxlength="24" autocomplete="nickname" required>
+                <button type="submit" class="launch-button">ENTER MISSION CONTROL →</button>
+            </form>
+            <p class="privacy-note">Your callsign is kept in this browser tab for your mission.</p>
+        </section>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
